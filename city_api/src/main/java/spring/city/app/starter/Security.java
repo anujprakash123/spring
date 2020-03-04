@@ -13,6 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class Security extends WebSecurityConfigurerAdapter {
 @Override
 protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+	//edit the user and password for the roles
 	auth.inMemoryAuthentication().withUser("user1").password("pass1").roles("user")
 	.and().withUser("user2").password("pass2").roles("user")
 	.and().withUser("admin").password("passcode").roles("admin");
